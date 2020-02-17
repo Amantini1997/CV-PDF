@@ -129,6 +129,10 @@
 
         /* Small device factor CSS */
         @media only screen and (max-width: 600px) {
+            html {
+                padding: 0px;
+            }
+
             #main-header {
                 display: grid;
                 grid-template-columns: repeat(1, 1fr);
@@ -194,8 +198,8 @@
             <ul type="disk">
                 <li>
                     <b>2019 - 2020: Placement student</b> at <a href="https://www.flooid.com/">Flooid</a>. 
-                    Here I learnt Ionic and Angular (consolidating my knowledge of Javascript (and Typescript), SCSS and HTML),
-                    and SpringBoot and JAXB. I also happened to maintain some Gatling tests (written in Scala).
+                    Here I learnt Ionic, Angular (consolidating my knowledge of Javascript (and Typescript), SCSS and HTML),
+                    SpringBoot and JAXB. I also happened to maintain some Gatling tests (written in Scala).
                 </li>
                 <li>
                     <b>2019: Member</b> of a University group in charge of the creation of the dekstop app "BloodTestDiary" 
@@ -262,7 +266,7 @@
             </aside>
         </section>
     </main>
-    <footer><b>REFERENCES:</b> available on demand</footer>
+    <footer><b>REFERENCES:</b> available on request</footer>
     <script>
         const MAX_RATE = 10;
         let ratings = document.querySelectorAll("ul#rating > *[data-rate]");
