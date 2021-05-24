@@ -15,11 +15,6 @@
             outline: none;
             color: black;
             text-decoration: none;
-            font-weight: 600;
-        }
-
-        address {
-            font-style: normal;
         }
 
         .full-circle {
@@ -58,10 +53,11 @@
         }
 
         body {
-            max-width: 600px;
+            max-width: 700px;
             background-color: white;
             margin: 0;
-            padding: 8px;
+            padding: 28px;
+            height: fit-content;
             box-shadow: -7px 14px 40px 9px black;
         }
 
@@ -70,11 +66,16 @@
             text-align: center;
         }
 
+        address {
+            font-style: normal;
+            margin-right: 10px;
+        }
+
         #main-header {
             display: grid;
-            grid-template-columns: 4fr 3fr;
-            text-align: center;
-            margin-bottom: 30px;
+            grid-template-columns: repeat(2, auto);
+            grid-row-gap: 7px;
+            margin: 0 20px 30px;
         }
 
         section header {
@@ -92,6 +93,20 @@
             margin-bottom: 40px;
         }
 
+        #education-list,
+        #experience-list {
+            padding-right: 30px;
+            text-align: justify;
+        }
+
+        [smaller] {
+            font-size: .9em;
+        }
+
+        [vspace] {
+            margin-bottom: 10px;
+        }
+
         .double {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -102,7 +117,7 @@
         }
 
         ul > li {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
         #rating {
@@ -161,41 +176,45 @@
 <body>
     <h1 id="title">Alessandro Amantini</h1>
     <header id="main-header">
-        <address><b>Address: </b>94 Newcomber Road, CV5 6NL</address>
-        <span id="telephone"><b>Phone: </b><a href="tel:+447919824459">(0) 7919 824459</a></span>
-        <span id="email"><b>Email: </b><a href="mailto:ale.amantini1997@gmail.com">ale.amantini1997@gmail.com</a></span>
-        <span id="git"><b>GitHub: </b><a href="https://github.com/Amantini1997">Amantini1997</a></span>
+        <a id="website" href="https://www.amantini.me/"><b>Website: </b>https://www.amantini.me/</a>
+        <a id="telephone" href="tel:+447919824459"><b>Phone: </b>+44 7919824459</a>
+        <a id="email" href="mailto:ale.amantini1997@gmail.com"><b>Email: </b>ale.amantini1997@gmail.com</a>
+        <a id="git" href="https://github.com/Amantini1997"><b>GitHub: </b>Amantini1997</a>
+        <address><b>Address: </b>Via Isole Del Capo Verde, 248, Rome, Italy</address>
     </header>
     <main>
         <section>
             <header>EDUCATION</header>
             <ul id="education-list" type="disk">
                 <li>
-                    <b>2017 – 2021:</b> <a href="https://www.kcl.ac.uk/">King’s College London</a>
-                    <br />
-                    - Bachelor’s Degree in Computer Science with Management 
-                    <br />
-                    - Average 1st year grade <b>[83.63 / 100] (First)</b>
-                    <br />
-                    - Average 2nd year grade <b>[82.25 / 100] (First)</b>
+                    <b>2017 – 2021: <a href="https://www.kcl.ac.uk/">King’s College London</a></b>
+                    (BSc in Computer Science with Management & Year in Industry, AI specialisation)
+                    <br vspace/>
+                    <div smaller>
+                        &nbsp; &nbsp;1<sup>st</sup> year grade <b>First</b> [83.63 / 100]
+                        <br />
+                        &nbsp; &nbsp;2<sup>nd</sup> year grade <b>First</b> [82.25 / 100]
+                    </div>
                 </li>
                 <li>
-                    <b>2016 – 2017:</b> <a href="https://www.uniroma1.it/it/pagina-strutturale/home">University La Sapienza</a>
-                    <br />
-                    - Computer Science 
+                    <b>2016 – 2017: <a href="https://www.uniroma1.it/it/pagina-strutturale/home">University La Sapienza</a></b> (Computer Science)
+                    <br vspace/>
+                    <div smaller>
+                        I studied computer science for a year, practicing a lot with Java mainly. I decided to interrupt this degree to start a new one at King’s College London
+                    </div>
                 </li>
                 <li>
-                    <b>2011 – 2016:</b> <a href="https://www.liceolabriola.it/">L.S.S Antonio Labriola (Italian High School)</a> 
-                    <br />
-                    - Science Subjects Diploma 
-                    <br />
-                    - Final grade (Esame di Maturità) <b>[100/100]</b>
+                    <b>2011 – 2016: <a href="https://www.liceolabriola.it/">L.S.S Antonio Labriola</b></a> (Italian High School) 
+                    <br vspace/>
+                    <div smaller>
+                        Final grade (Esame di Maturità) <b>[100/100]</b>
+                    </div>
                 </li>
             </ul>
         </section>
         <section>
             <header>EXPERIENCE</header>
-            <ul type="disk">
+            <ul id="experience-list" type="disk">
                 <li>
                     <b>2019 - 2020: Placement student</b> at <a href="https://www.flooid.com/">Flooid</a>. 
                     Here I learnt SpringBoot, JAXB, Ionic, Angular and I consolidated my knowledge of Javascript (and Typescript), SCSS and HTML.
@@ -206,7 +225,7 @@
                     (included as a repository in the github account) for the NHS department of my University.
                 </li>
                 <li>
-                    <b>2017 - 2019: Vice-President</b> of Garden Halls, student accommodation housing +1000 
+                    <b>2018 - 2019: Vice-President</b> of Garden Halls, student accommodation housing +1000 
                     students run by University of London - effective time management and event coordination
                     as well as gained the ability to listen to people’s problems and obtain appropriate solutions.
                 </li>
@@ -214,34 +233,36 @@
                     <b>2018: Leader</b> in the java group project “London Air Bnb” (included as a repository 
                     in the github account) - delegation and team programming skills developed.
                 </li>
-                <li>
-                    <b>2015: Leader</b> in the Science project “Progetto Scienze Molecolare” - increased 
-                    my ability to find solutions to intellectually challenging problems under time pressure.
-                </li>
             </ul>
         </section>
         <section class="double">
             <aside>
                 <header>PROGRAMMING LANGUAGES</header>
                 <ul id="rating">
-                    <li data-rate="9"><span>Java</span><div class="circle-ctn"></div></li>
                     <li data-rate="9" style="margin-bottom: 0;"><span>Javascript </span><div class="circle-ctn"></div></li>        
                     <small>(ES6 & Typescript)</small>  
                     <li data-rate="9" style="margin-top: 10px;"><span>SCSS & HTML</span><div class="circle-ctn"></div></li>
-                    <li data-rate="6"><span>Python</span><div class="circle-ctn"></div></li>                  
+                    <li data-rate="9"><span>Java</span><div class="circle-ctn"></div></li>
+                    <li data-rate="8"><span>Python</span><div class="circle-ctn"></div></li>                  
                     <li data-rate="6"><span>Scala</span><div class="circle-ctn"></div></li>
+                    <li data-rate="5"><span>SQL (MySQL)</span><div class="circle-ctn"></div></li>
                     <li data-rate="4"><span>C++</span><div class="circle-ctn"></div></li>
+                    
                 </ul>
             </aside>
             <aside>
                 <header>IT SKILLS & KNOWLEDGE</header>
                 <ul>
-                    <li>Ionic, Angular, React</li>
-                    <li>SQL</li>
+                    <li><b>Ionic, Angular 2+, React, Chrome Debugging tools</b></li>
+                    <li><b>Node.js</b> and <b>REST architecture</b> fundamentals</li>
+                    <li><b>Linux</b> and <b>Windows</b> systems (including bash and batch commands</li>
                     <li>Microsoft Office</li>
-                    <li>VCS(Git & Mercurial)</li>
-                    <li>Jenkins</li>
+                    <li>VCS (Git & Mercurial) & CI / CD understanding</li>
                     <li>Great <b>problem-solving</b> attitude</li>
+                    <li>Knowledge of <b>Data Structures</b> and <b>Graphs Theory</b></li>
+                    <li><b>AI Planning</b> (PDDL and heuristic functions)</li>
+                    <li><b>Machine Learning</b> (techniques as well as main python libraries for ML)</li>
+                    
                 </ul>
             </aside>
         </section>
@@ -251,7 +272,7 @@
                 <ul id="hobbies">
                     <li> Basketball </li>
                     <li> Travelling </li>
-                    <li> Photoshop </li>
+                    <li> Photoshop and Spark AR</li>
                     <li> Hackhatons </li>
                 </ul>
             </aside>
